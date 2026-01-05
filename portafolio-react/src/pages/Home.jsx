@@ -1,4 +1,6 @@
 import profileImage from "../assets/fotoCV.jpg";
+import CallToAction from "../components/CallToAction";
+
 
 function Home() {
   return (
@@ -59,3 +61,4 @@ function Home() {
 }
 
 export default Home;
+<CallToAction />

@@ -1,22 +1,57 @@
-function Contact() {
+export default function Contact() {
   return (
-    <main className="min-h-screen px-6 py-10">
-      <h1 className="text-3xl font-bold mb-6">
+    <section className="max-w-4xl mx-auto px-6 py-20 text-center">
+      <h1 className="text-4xl font-bold mb-4">
         Contacto
       </h1>
 
-      <p className="text-gray-600 mb-6">
-        Puedes contactarme directamente por correo electrónico:
+      <p className="text-gray-600 max-w-2xl mx-auto mb-10">
+        Estoy abierto a oportunidades como desarrollador web junior,
+        tanto presenciales como remotas en España.
+        Si te interesa mi perfil, no dudes en contactarme.
       </p>
 
-      <a
-        href="mailto:diegocifuentesposada@gmail.com"
-        className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-      >
-        Enviar correo
-      </a>
-    </main>
+      <div className="bg-white shadow rounded-xl p-8 max-w-xl mx-auto">
+
+        <div className="space-y-6 text-left">
+
+          {/* EMAIL */}
+          <div>
+            <p className="text-sm text-gray-500">Email</p>
+            <a
+              href="mailto:diegocifuentesposada@gmail.com"
+              className="text-lg font-semibold text-blue-600 hover:underline"
+            >
+              diegocifuentesposada@gmail.com
+            </a>
+          </div>
+
+         {/* LINKEDIN */}
+          <div>
+            <p className="text-sm text-gray-500">LinkedIn</p>
+            <a
+              href="https://www.linkedin.com/in/diego-cifuentesp"
+              target="_blank"
+              rel="noreferrer"
+              className="text-lg font-semibold text-blue-600 hover:underline"
+            >
+              linkedin.com/in/diego-cifuentesp
+            </a>
+          </div>
+
+          {/* UBICACIÓN */}
+          <div>
+            <p className="text-sm text-gray-500">Ubicación</p>
+            <p className="text-lg font-semibold text-gray-800">
+              Madrid · Disponibilidad presencial/remota
+            </p>
+             <p className="text-lg font-semibold text-gray-800">
+              España · Disponibilidad remota
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
   );
 }
-
-export default Contact;

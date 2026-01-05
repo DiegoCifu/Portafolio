@@ -29,13 +29,13 @@ export default function About() {
         </p>
       </div>
 
-     {/* SKILLS VISUALES */}
+     {/* TECNOLOGÍAS Y CONOCIMIENTOS */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">
           Tecnologías & Conocimientos
         </h2>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
           {/* FRONTEND */}
           <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
@@ -57,9 +57,9 @@ export default function About() {
               Backend
             </h3>
             <ul className="space-y-2 text-gray-700">
-              <li>PHP (CRUD, formularios, sesiones)</li>
-              <li>Autenticación básica</li>
-              <li>Conexión Frontend – Backend</li>
+              <li>PHP</li>
+              <li>CRUD y formularios</li>
+              <li>Sesiones y autenticación básica</li>
               <li>Conceptos REST / APIs</li>
             </ul>
           </div>
@@ -76,28 +76,29 @@ export default function About() {
             </ul>
           </div>
 
-          {/* PLATAFORMAS */}
+          {/* LENGUAJES */}
           <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
             <h3 className="text-xl font-semibold mb-4 text-indigo-600">
-              Plataformas & Ecosistemas
+              Lenguajes de Programación
             </h3>
             <ul className="space-y-2 text-gray-700">
-              <li>Git & GitHub</li>
-              <li>.NET (conocimientos básicos)</li>
-              <li>Visual Studio / VS Code</li>
-              <li>Entornos Windows</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>Python (básico)</li>
+              <li>C# / .NET (conocimientos básicos)</li>
             </ul>
           </div>
 
-          {/* COMPLEMENTARIAS */}
+          {/* PLATAFORMAS */}
           <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
             <h3 className="text-xl font-semibold mb-4 text-orange-600">
-              Skills Complementarias
+              Plataformas & Herramientas
             </h3>
             <ul className="space-y-2 text-gray-700">
-              <li>Python (nivel básico)</li>
-              <li>Excel (nivel básico)</li>
-              <li>Análisis de datos simple</li>
+              <li>Git & GitHub</li>
+              <li>Visual Studio Code</li>
+              <li>Visual Studio</li>
+              <li>IntelliJ IDEA</li>
             </ul>
           </div>
 
@@ -107,15 +108,29 @@ export default function About() {
               Fundamentos Técnicos
             </h3>
             <ul className="space-y-2 text-gray-700">
-              <li>Conceptos básicos de redes</li>
               <li>Modelo cliente-servidor</li>
+              <li>Conceptos básicos de redes</li>
               <li>Buenas prácticas de seguridad</li>
               <li>Principios básicos de ciberseguridad</li>
             </ul>
           </div>
 
+          {/* COMPLEMENTARIAS */}
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition md:col-span-2 lg:col-span-3">
+            <h3 className="text-xl font-semibold mb-4 text-gray-700 text-center">
+              Skills Complementarias
+            </h3>
+            <ul className="flex flex-wrap justify-center gap-4 text-gray-700">
+              <li>Excel (básico)</li>
+              <li>Análisis de datos simple</li>
+              <li>Trabajo en equipo</li>
+              <li>Aprendizaje continuo</li>
+            </ul>
+          </div>
+
         </div>
       </section>
+
 
 
       {/* INGLÉS */}
