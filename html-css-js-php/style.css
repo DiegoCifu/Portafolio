@@ -1,0 +1,461 @@
+
+/* ==========================
+   VARIABLES (ACCESIBILIDAD)
+   ========================== */
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #2563eb;
+  --accent-2: #0ea5e9;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.06);
+  --transition: 0.25s ease;
+
+  /* Dark mode */
+  --dark-bg: #0f172a;
+  --dark-surface: #1e293b;
+  --dark-text: #e2e8f0;
+  --dark-muted: #94a3b8;
+  --dark-accent: #3b82f6;
+}
+
+/* MODO OSCURO */
+body.dark-mode{
+  --bg: var(--dark-bg);
+  --surface: var(--dark-surface);
+  --card: var(--dark-surface);
+  --text: var(--dark-text);
+  --muted: var(--dark-muted);
+  --accent: var(--dark-accent);
+}
+
+/* ==========================
+   RESET + BASE
+   ========================== */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.55;
+  min-height:100vh;
+  transition:background var(--transition),color var(--transition);
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* Contenedor */
+.container{max-width:1100px;margin:0 auto;padding:0 1rem}
+
+/* ==========================
+   HEADER
+   ========================== */
+.header{
+  background:var(--surface);
+  box-shadow:var(--shadow);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:72px;
+}
+
+.logo{
+  font-weight:800;
+  font-size:1.2rem;
+  color:var(--accent);
+}
+
+/* Nav desktop */
+.nav-links{
+  display:flex;
+  gap:1.2rem;
+  list-style:none;
+}
+.nav-links a{
+  font-weight:600;
+  padding:8px 12px;
+  border-radius:8px;
+  color:var(--text);
+  transition:var(--transition);
+}
+.nav-links a:hover{
+  background:rgba(0,0,0,0.06);
+  color:var(--accent);
+}
+
+/* Hamburguesa */
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  width:42px;
+  height:42px;
+  cursor:pointer;
+}
+.menu-toggle span{
+  display:block;
+  height:3px;
+  background:var(--text);
+  margin:6px 0;
+  border-radius:4px;
+  transition:.25s;
+}
+
+/* Móvil */
+@media(max-width:900px){
+  .menu-toggle{display:block}
+  .nav-links{
+    position:fixed;
+    top:72px;
+    right:-110%;
+    flex-direction:column;
+    background:var(--surface);
+    width:70%;
+    height:calc(100vh - 72px);
+    padding:2rem 1rem;
+    transition:right .3s;
+    box-shadow:-8px 0 25px rgba(0,0,0,0.1);
+  }
+  .nav-links.show{right:0}
+}
+
+/* Modo tema */
+.theme-btn{
+  background:none;
+  border:none;
+  font-size:1.3rem;
+  cursor:pointer;
+}
+
+/* ==========================
+   HERO SLIDER
+   ========================== */
+.hero-slider{
+  width:100%;
+  height:75vh;
+  overflow:hidden;
+  position:relative;
+  background:#000;
+}
+.slider-container{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+.slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transform:translateX(100%);
+  transition:opacity .7s, transform .7s;
+}
+.slide.active{
+  opacity:1;
+  transform:translateX(0);
+}
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Flechas */
+.slider-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.45);
+  border:none;
+  color:white;
+  font-size:1.9rem;
+  padding:.5rem .9rem;
+  cursor:pointer;
+  border-radius:10px;
+}
+.prev{left:15px}
+.next{right:15px}
+
+/* Dots */
+.slider-dots{
+  position:absolute;
+  bottom:20px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+.slider-dots span{
+  width:12px;
+  height:12px;
+  background:white;
+  border-radius:50%;
+  opacity:.5;
+  cursor:pointer;
+}
+.active-dot{
+  opacity:1;
+  background:var(--accent);
+}
+
+/* ==========================
+   INFO CARDS
+   ========================== */
+.info-cards{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:40px 0;
+}
+.card{
+  background:var(--card);
+  padding:24px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  width:320px;
+  text-align:center;
+  transition:var(--transition);
+}
+.card p{color:var(--muted)}
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* ==========================
+   CURSOS
+   ========================== */
+.main-cursos{padding:48px 0}
+.cursos-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:26px;
+}
+.curso-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.curso-card img{height:200px;object-fit:cover}
+.curso-info{padding:18px}
+.cert-list{list-style:none;padding:0}
+.cert-list li{
+  padding-left:20px;
+  position:relative;
+  color:var(--muted);
+}
+.cert-list li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:var(--accent);
+}
+
+.btn-curso{
+  display:inline-block;
+  padding:10px 16px;
+  background:var(--accent);
+  color:white;
+  border-radius:10px;
+  font-weight:700;
+  margin-top:12px;
+}
+
+/* Modal */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  background:rgba(0,0,0,0.5);
+  align-items:center;
+  justify-content:center;
+}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{
+  background:var(--surface);
+  padding:22px;
+  width:min(700px,90%);
+  border-radius:var(--radius);
+}
+.modal-close{
+  position:absolute;
+  right:15px;
+  top:12px;
+  background:none;
+  border:none;
+  font-size:1.4rem;
+}
+
+/* ==========================
+   ESTUDIANTES
+   ========================== */
+.main-estudiantes{padding:52px 0}
+.estudiantes-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+.est-card{
+  background:var(--card);
+  padding:18px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.est-card img{
+  height:170px;
+  width:100%;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* ==========================
+   SEDES
+   ========================== */
+.sedes-collage{
+  padding:28px 0 10px;
+}
+.collage-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:10px;
+}
+.collage-item{
+  height:160px;
+  overflow:hidden;
+  border-radius:var(--radius);
+}
+.collage-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.collage-text{
+  text-align:center;
+  margin-top:14px;
+}
+.collage-text p{color:var(--muted)}
+
+/* Botones */
+.sedes-nav{
+  text-align:center;
+  margin:28px 0;
+}
+.sedes-nav-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+.sedes-nav-buttons button{
+  padding:8px 14px;
+  border-radius:10px;
+  border:none;
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* Grid sedes */
+.sedes-grid{
+  display:grid;
+  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  padding:20px 0;
+}
+.sede-card{
+  background:var(--card);
+  padding:20px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.sede-card h2{margin-bottom:5px}
+.sede-card .sede-dir{
+  font-weight:700;
+  color:var(--muted);
+}
+.sede-card p{
+  margin:6px 0;
+  color:var(--muted);
+}
+
+/* ==========================
+   CONTACTO
+   ========================== */
+.main-contacto{padding:48px 0}
+contact-intro{color:var(--muted)}
+.contact-form{
+  background:var(--surface);
+  padding:22px;
+  max-width:700px;
+  margin:auto;
+  box-shadow:var(--shadow);
+  border-radius:var(--radius);
+}
+.form-group{margin-bottom:14px}
+label{font-weight:600;margin-bottom:4px;display:block}
+input,select,textarea{
+  width:100%;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+  background:var(--surface);
+  color:var(--text);
+}
+input:focus,select:focus,textarea:focus{
+  outline:2px solid var(--accent);
+}
+.submit-btn{
+  width:100%;
+  padding:12px;
+  background:var(--accent);
+  border:none;
+  color:white;
+  font-weight:700;
+  border-radius:10px;
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+.footer{
+  margin-top:40px;
+  padding:36px 0;
+  background:#1e293b;
+  color:white;
+}
+.footer-contenedor{
+  display:flex;
+  flex-wrap:wrap;
+  gap:22px;
+  justify-content:space-between;
+}
+.footer-copy{
+  text-align:center;
+  margin-top:12px;
+  color:#cbd5e1;
+}
+
+/* ==========================
+   REVEAL
+   ========================== */
+.reveal{
+  opacity:0;
+  transform:translateY(12px);
+  transition:opacity .6s, transform .6s;
+}
+.reveal.visible{
+  opacity:1;
+  transform:none;
+}

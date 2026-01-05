@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Estudiantes — Escuela de Idiomas</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/ce146dd1e4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="logo" href="index.html">Escuela de Idiomas</a>
+      <button class="menu-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="estudiantes.html">Estudiantes</a></li>
+        <li><a href="sedes.html">Sedes</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-btn">🌙</button>
+    </nav>
+  </header>
+
+  <main class="main-estudiantes container">
+    <h1 class="titulo-estudiantes reveal">Servicios para Estudiantes</h1>
+    <p class="subtitulo-estudiantes reveal">Accede a recursos, matriculación y tu área privada.</p>
+
+    <section class="estudiantes-grid" id="studentsGrid">
+      <article class="est-card reveal" data-title="Matrícula Online">
+        <img src="imagenes/matricula.png" alt="Matrícula Online">
+        <h3>Matrícula Online</h3>
+        <p>Realiza tu matrícula de forma rápida y sencilla.</p>
+        <a class="boton-est" href="#">Acceder</a>
+      </article>
+
+      <article class="est-card reveal" data-title="Área Privada">
+        <img src="imagenes/areaPrivada.png" alt="Área Privada">
+        <h3>Área Privada</h3>
+        <p>Inicia sesión para ver tu información académica.</p>
+        <a class="boton-est" href="#">Iniciar sesión</a>
+      </article>
+
+      <article class="est-card reveal" data-title="Manual de Convivencia">
+        <img src="imagenes/manualConvivencia.jpg" alt="Manual de Convivencia">
+        <h3>Manual de Convivencia</h3>
+        <p>Consulta las normas y lineamientos de la escuela.</p>
+        <a class="boton-est" href="#">Ver manual</a>
+      </article>
+    </section>
+  </main>
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-contenedor container">
+      <div class="footer-seccion">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+          <li><a href="cursos.html"><i class="fa-solid fa-book"></i> Cursos</a></li>
+          <li><a href="estudiantes.html"><i class="fa-regular fa-address-card"></i> Estudiantes</a></li>
+          <li><a href="sedes.html"><i class="fa-regular fa-images"></i> Sedes</a></li>
+          <li><a href="contacto.html"><i class="fa-regular fa-envelope"></i> Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-seccion">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="legal.html#privacidad" target="_blank">Política de Privacidad</a></li>
+          <li><a href="legal.html#terminos" target="_blank">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-seccion">
+        <h4>Síguenos</h4>
+        <ul class="redes-sociales">
+          <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i> X</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-copy container">&copy; 2025 Escuela de Idiomas. Todos los derechos reservados.</div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diego Cifuentes | Desarrollador Web</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <h1 class="logo">Diego Cifuentes</h1>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#education">Formación</a></li>
+        <li><a href="#skills">Tecnologías</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero container">
+    <img src="image.png" alt="Foto profesional de Diego" class="profile-img" />
+    <div class="hero-text">
+      <h2>¡Hola! Soy <span>Diego</span></h2>
+      <p class="tagline">Desarrollador de Software Junior | Formación en Ciberseguridad | Docente e Investigador</p>
+      <p class="intro">
+        Bienvenido a mi espacio profesional. Aquí encontrarás mi trayectoria, habilidades y los proyectos que estoy construyendo mientras evoluciono en el mundo IT.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">Ver Proyectos</a>
+        <a href="https://www.linkedin.com/in/diego-cifuentesp/" target="_blank" class="btn ghost">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container section">
+    <h2>Sobre Mí</h2>
+    <p class="about-text">
+      Soy Licenciado en Filosofía con un Máster en Investigación en Educación, actualmente en proceso de transición profesional hacia el desarrollo de software y la ciberseguridad. 
+      Mi experiencia como docente e investigador me ha dotado de pensamiento analítico, resolución de problemas y comunicación efectiva, cualidades que aplico a la tecnología.
+    </p>
+    <div class="about-extra hidden">
+      <p>
+        Estoy cursando el Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM), poseo el Certificado Profesional IFCD0110 en Publicación de Páginas Web y la certificación en Ciberseguridad de Google.
+      </p>
+      <p>
+        Mi objetivo es integrarme en equipos de desarrollo y ciberseguridad, aportar valor desde una mirada crítica y seguir creciendo profesionalmente.
+      </p>
+    </div>
+    <button id="toggleAbout" class="btn small">Leer más</button>
+  </section>
+
+  <section id="education" class="container section">
+    <h2>Formación Académica</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h4>Certificado Profesional IFCD0110</h4>
+        <p>Comunidad de Madrid — 2025</p>
+      </div>
+      <div class="edu-card">
+        <h4>Técnico Superior en DAM</h4>
+        <p>IES Barajas — En curso</p>
+      </div>
+      <div class="edu-card">
+        <h4>Google Cybersecurity</h4>
+        <p>Coursera — 2025</p>
+      </div>
+      <div class="edu-card">
+        <h4>Máster en Investigación en Educación</h4>
+        <p>U. Complutense de Madrid — 2021</p>
+      </div>
+      <div class="edu-card">
+        <h4>Licenciado en Filosofía</h4>
+        <p>U. de Antioquia — 2015</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="container section">
+    <h2>Tecnologías y Herramientas</h2>
+    <div class="skills-grid">
+      <div>
+        <h4>Lenguajes</h4>
+        <p>HTML5, CSS3, JavaScript, Python, PHP, C#, Java</p>
+      </div>
+      <div>
+        <h4>Frameworks</h4>
+        <p>Angular, Node.js, .NET, Hibernate</p>
+      </div>
+      <div>
+        <h4>Bases de Datos</h4>
+        <p>MySQL, Oracle SQL</p>
+      </div>
+      <div>
+        <h4>Herramientas</h4>
+        <p>GitHub, VS Code, Docker, IntelliJ IDEA, NetBeans</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="container section">
+    <h2>Mis Proyectos</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="reproductor.png" alt="Reproductor de Música">
+        <h4>Reproductor de Música</h4>
+        <p>App interactiva que reproduce canciones dinámicamente usando JavaScript puro y manipulación del DOM.</p>
+        <a href="reproductorMusica/index.html" class="btn small">Ver Demo</a>
+      </div>
+      <div class="project-card">
+        <img src="candado.png" alt="Candado Digital">
+        <h4>Candado Digital</h4>
+        <p>Interfaz visual que simula desbloqueo con secuencia de teclas, aplicando eventos del DOM y lógica con arrays.</p>
+        <a href="candado/escuchaEventos.html" class="btn small">Ver Demo</a>
+      </div>
+      <div class="project-card">
+        <img src="hotel.png" alt="Gestión de Hotel">
+        <h4>Gestión de Hotel</h4>
+        <p>Proyecto con múltiples funcionalidades dinámicas: sliders, validaciones y gestión de precios.</p>
+        <a href="hotel/index.html" class="btn small">Ver Demo</a>
+      </div>
+      <div class="project-card">
+        <img src="wordle.png" alt="Wordle Clon">
+        <h4>Clon de Wordle</h4>
+        <p>Juego desarrollado con HTML, CSS y JavaScript, con validación y feedback visual.</p>
+        <a href="wordle/wordle.html" class="btn small">Ver Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container section">
+    <h2>Contacto</h2>
+    <form action="https://formspree.io/f/xovwpwqk" method="POST" class="contact-form">
+      <input type="text" name="nombre" placeholder="Nombre" required />
+      <input type="email" name="email" placeholder="Correo electrónico" required />
+      <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="5" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <div class="social-links">
+      <a href="https://github.com/" target="_blank">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/diego-cifuentesp/" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> Diego Cifuentes | Desarrollador Web</small>
+  </footer>
+</body>
+</html>
+
