@@ -1,5 +1,0 @@
-En esta página tenemos: 
-
-HTML5 + CSS3 + JS
-
-Accesibilidad, responsive, slider. Buenas prácticas de programación.
